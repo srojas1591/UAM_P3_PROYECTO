@@ -66,12 +66,11 @@
             this.dgvEstados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstados.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvEstados.Location = new System.Drawing.Point(16, 34);
-            this.dgvEstados.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEstados.Location = new System.Drawing.Point(12, 28);
             this.dgvEstados.MultiSelect = false;
             this.dgvEstados.Name = "dgvEstados";
             this.dgvEstados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEstados.Size = new System.Drawing.Size(1093, 542);
+            this.dgvEstados.Size = new System.Drawing.Size(820, 440);
             this.dgvEstados.TabIndex = 0;
             // 
             // toolStrip1
@@ -98,7 +97,7 @@
             this.tslSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1128, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(846, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -110,11 +109,12 @@
             this.tsbtnRefrescar.Name = "tsbtnRefrescar";
             this.tsbtnRefrescar.Size = new System.Drawing.Size(24, 24);
             this.tsbtnRefrescar.Text = "toolStripButton1";
+            this.tsbtnRefrescar.Click += new System.EventHandler(this.tsbtnRefrescar_Click);
             // 
             // tslRefrescar
             // 
             this.tslRefrescar.Name = "tslRefrescar";
-            this.tslRefrescar.Size = new System.Drawing.Size(70, 24);
+            this.tslRefrescar.Size = new System.Drawing.Size(55, 24);
             this.tslRefrescar.Text = "Refrescar";
             // 
             // toolStripSeparator1
@@ -135,7 +135,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(52, 24);
+            this.toolStripLabel2.Size = new System.Drawing.Size(42, 24);
             this.toolStripLabel2.Text = "Nuevo";
             // 
             // toolStripSeparator2
@@ -156,7 +156,7 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(73, 24);
+            this.toolStripLabel3.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel3.Text = "Modificar";
             // 
             // toolStripSeparator3
@@ -172,11 +172,12 @@
             this.tsbtnEliminar.Name = "tsbtnEliminar";
             this.tsbtnEliminar.Size = new System.Drawing.Size(24, 24);
             this.tsbtnEliminar.Text = "eliminar";
+            this.tsbtnEliminar.Click += new System.EventHandler(this.tsbtnEliminar_Click);
             // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(63, 24);
+            this.toolStripLabel4.Size = new System.Drawing.Size(50, 24);
             this.toolStripLabel4.Text = "Eliminar";
             // 
             // toolStripSeparator4
@@ -196,13 +197,13 @@
             // tslBuscar
             // 
             this.tslBuscar.Name = "tslBuscar";
-            this.tslBuscar.Size = new System.Drawing.Size(52, 24);
+            this.tslBuscar.Size = new System.Drawing.Size(42, 24);
             this.tslBuscar.Text = "Buscar";
             // 
             // tstxtBuscar
             // 
             this.tstxtBuscar.Name = "tstxtBuscar";
-            this.tstxtBuscar.Size = new System.Drawing.Size(132, 27);
+            this.tstxtBuscar.Size = new System.Drawing.Size(100, 27);
             this.tstxtBuscar.TextChanged += new System.EventHandler(this.tstxtBuscar_TextChanged);
             // 
             // toolStripSeparator5
@@ -223,19 +224,18 @@
             // tslSalir
             // 
             this.tslSalir.Name = "tslSalir";
-            this.tslSalir.Size = new System.Drawing.Size(38, 24);
+            this.tslSalir.Size = new System.Drawing.Size(29, 24);
             this.tslSalir.Text = "Salir";
             // 
             // FRM_Listar_Estados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1128, 590);
+            this.ClientSize = new System.Drawing.Size(846, 479);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvEstados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_Listar_Estados";
             this.Text = "FRM_Listar_Estados";
             this.Load += new System.EventHandler(this.FRM_Listar_Estados_Load);
