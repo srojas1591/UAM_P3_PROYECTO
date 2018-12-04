@@ -43,7 +43,9 @@
     <Compile Include="BD\cls_BD_DAL.cs" />
     <Compile Include="Cat_Mant\cls_EMPLEADOS_DAL.cs" />
     <Compile Include="Cat_Mant\cls_ESTADOS_DAL.cs" />
+    <Compile Include="Cat_Mant\Cls_Horarios_DAL.cs" />
     <Compile Include="Cat_Mant\cls_PRODUCTOS_DAL.cs" />
+    <Compile Include="Cat_Mant\Cls_Tipo_Empleados_DAL.cs" />
     <Compile Include="Cat_Mant\cls_USUARIOS_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

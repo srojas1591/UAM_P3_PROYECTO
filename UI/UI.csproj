@@ -58,6 +58,18 @@
     <Compile Include="Pantallas\Editar\FRM_Editar_Estados.Designer.cs">
       <DependentUpon>FRM_Editar_Estados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\Editar\Frm_Editar_Horarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Editar\Frm_Editar_Horarios.Designer.cs">
+      <DependentUpon>Frm_Editar_Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Editar\Frm_Editar_Tipo_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Editar\Frm_Editar_Tipo_Empleados.Designer.cs">
+      <DependentUpon>Frm_Editar_Tipo_Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\FRM_PRINCIPAL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +88,23 @@
     <Compile Include="Pantallas\Listar\FRM_Listar_Estados.Designer.cs">
       <DependentUpon>FRM_Listar_Estados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\Listar\Frm_Listar_Horarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Listar\Frm_Listar_Horarios.Designer.cs">
+      <DependentUpon>Frm_Listar_Horarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\Listar\FRM_Listar_Productos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pantallas\Listar\FRM_Listar_Productos.Designer.cs">
       <DependentUpon>FRM_Listar_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Listar\Frm_Listar_Tipo_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Listar\Frm_Listar_Tipo_Empleados.Designer.cs">
+      <DependentUpon>Frm_Listar_Tipo_Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\Listar\FRM_Listar_Usuarios.cs">
       <SubType>Form</SubType>
@@ -96,6 +120,12 @@
     <EmbeddedResource Include="Pantallas\Editar\FRM_Editar_Estados.resx">
       <DependentUpon>FRM_Editar_Estados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Editar\Frm_Editar_Horarios.resx">
+      <DependentUpon>Frm_Editar_Horarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Editar\Frm_Editar_Tipo_Empleados.resx">
+      <DependentUpon>Frm_Editar_Tipo_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\FRM_PRINCIPAL.resx">
       <DependentUpon>FRM_PRINCIPAL.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,8 +135,14 @@
     <EmbeddedResource Include="Pantallas\Listar\FRM_Listar_Estados.resx">
       <DependentUpon>FRM_Listar_Estados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Listar\Frm_Listar_Horarios.resx">
+      <DependentUpon>Frm_Listar_Horarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Listar\FRM_Listar_Productos.resx">
       <DependentUpon>FRM_Listar_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Listar\Frm_Listar_Tipo_Empleados.resx">
+      <DependentUpon>Frm_Listar_Tipo_Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Listar\FRM_Listar_Usuarios.resx">
       <DependentUpon>FRM_Listar_Usuarios.cs</DependentUpon>

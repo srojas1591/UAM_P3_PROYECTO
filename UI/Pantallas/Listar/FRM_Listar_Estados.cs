@@ -91,5 +91,33 @@ namespace UI.Pantallas.Listar
 
             CargarDatos();
         }
+
+        private void tsbtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvEstados.RowCount > 0)
+            {
+                string valor = dgvEstados.SelectedRows[0].Cells[0].Value.ToString();
+
+                Obj_Estados_BLL.Eliminar_Estados(ref Obj_Estados_DAL, valor);
+
+                if (Obj_Estados_DAL.SMsjError == string.Empty)
+                {
+                    CargarDatos();
+                }
+                else
+                {
+                    MessageBox.Show("Se presento un error a la hora de eliminar: [" + Obj_Estados_DAL.SMsjError + "].", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tabla vacia");
+            }
+        }
+
+        private void tsbtnRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
     }
 }
