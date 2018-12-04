@@ -222,7 +222,7 @@ namespace BLL.BD
                         Obj_BD_DAL.Obj_CNX_BD.Open();
                     }
 
-                    Obj_BD_DAL.Obj_DAP = new SqlDataAdapter(Obj_BD_DAL.SNomb_Sp, Obj_BD_DAL.Obj_CNX_BD);
+                    Obj_BD_DAL.Obj_CMD = new SqlCommand (Obj_BD_DAL.SNomb_Sp, Obj_BD_DAL.Obj_CNX_BD);
 
                     if (Obj_BD_DAL.dt_Parametros.Rows.Count >= 1)
                     {
@@ -275,7 +275,7 @@ namespace BLL.BD
                             Obj_BD_DAL.Obj_CMD.Parameters.Add(dr[0].ToString(), dbType).Value = dr[2].ToString();
                         }
                     }
-                    Obj_BD_DAL.Obj_DAP.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    Obj_BD_DAL.Obj_CMD.CommandType = CommandType.StoredProcedure;
                     Obj_BD_DAL.SValorScalar = Obj_BD_DAL.Obj_CMD.ExecuteScalar().ToString();
                     Obj_BD_DAL.SMsjError = string.Empty;
                 }
