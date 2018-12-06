@@ -10,7 +10,7 @@ namespace DAL.Cat_Mant
     public class cls_USUARIOS_DAL
     {
         private char _cIdEstados, _cAx;
-        private string _sMsjError, _sDescEstado;
+        private string _sMsjError, _sNombreUsuario, _sContrasena, _sIdEmpleado, _sPk;
         public DataTable Obj_DT = new DataTable();
 
         public char CIdEstados
@@ -52,16 +52,55 @@ namespace DAL.Cat_Mant
             }
         }
 
-        public string SDescEstado
+        public string SNombreUsuario
         {
             get
             {
-                return _sDescEstado;
+                return _sNombreUsuario;
             }
 
             set
             {
-                _sDescEstado = value;
+                _sNombreUsuario = value;
+            }
+        }
+
+        public string SContrasena
+        {
+            get
+            {
+                return _sContrasena;
+            }
+
+            set
+            {
+                _sContrasena = value;
+            }
+        }
+
+        public string SIdEmpleado
+        {
+            get
+            {
+                return _sIdEmpleado;
+            }
+
+            set
+            {
+                _sIdEmpleado = value;
+            }
+        }
+
+        public string sPk
+        {
+            get
+            {
+                return _sPk;
+            }
+
+            set
+            {
+                _sPk = value;
             }
         }
     }

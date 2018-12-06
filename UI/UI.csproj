@@ -58,6 +58,12 @@
     <Compile Include="Pantallas\Editar\FRM_Editar_Estados.Designer.cs">
       <DependentUpon>FRM_Editar_Estados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\Editar\FRM_Editar_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Editar\FRM_Editar_Usuarios.designer.cs">
+      <DependentUpon>FRM_Editar_Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\FRM_PRINCIPAL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Editar\FRM_Editar_Estados.resx">
       <DependentUpon>FRM_Editar_Estados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Editar\FRM_Editar_Usuarios.resx">
+      <DependentUpon>FRM_Editar_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\FRM_PRINCIPAL.resx">
       <DependentUpon>FRM_PRINCIPAL.cs</DependentUpon>

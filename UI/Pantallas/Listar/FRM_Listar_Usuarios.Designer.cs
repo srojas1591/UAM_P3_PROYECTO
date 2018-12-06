@@ -89,6 +89,7 @@
             this.tsbtnRefrescar.Name = "tsbtnRefrescar";
             this.tsbtnRefrescar.Size = new System.Drawing.Size(24, 24);
             this.tsbtnRefrescar.Text = "toolStripButton1";
+            this.tsbtnRefrescar.Click += new System.EventHandler(this.tsbtnRefrescar_Click);
             // 
             // tslRefrescar
             // 
@@ -109,6 +110,7 @@
             this.tsbtnNuevo.Name = "tsbtnNuevo";
             this.tsbtnNuevo.Size = new System.Drawing.Size(24, 24);
             this.tsbtnNuevo.Text = "nuevo";
+            this.tsbtnNuevo.Click += new System.EventHandler(this.tsbtnNuevo_Click_1);
             // 
             // toolStripLabel2
             // 
@@ -129,6 +131,7 @@
             this.tsbtnModificar.Name = "tsbtnModificar";
             this.tsbtnModificar.Size = new System.Drawing.Size(24, 24);
             this.tsbtnModificar.Text = "Modificar";
+            this.tsbtnModificar.Click += new System.EventHandler(this.tsbtnModificar_Click);
             // 
             // toolStripLabel3
             // 
@@ -149,6 +152,7 @@
             this.tsbtnEliminar.Name = "tsbtnEliminar";
             this.tsbtnEliminar.Size = new System.Drawing.Size(24, 24);
             this.tsbtnEliminar.Text = "eliminar";
+            this.tsbtnEliminar.Click += new System.EventHandler(this.tsbtnEliminar_Click);
             // 
             // toolStripLabel4
             // 
@@ -180,6 +184,7 @@
             // 
             this.tstxtBuscar.Name = "tstxtBuscar";
             this.tstxtBuscar.Size = new System.Drawing.Size(132, 27);
+            this.tstxtBuscar.TextChanged += new System.EventHandler(this.tstxtBuscar_TextChanged);
             // 
             // toolStripSeparator5
             // 
@@ -194,6 +199,7 @@
             this.tsbtnSalir.Name = "tsbtnSalir";
             this.tsbtnSalir.Size = new System.Drawing.Size(24, 24);
             this.tsbtnSalir.Text = "Salir";
+            this.tsbtnSalir.Click += new System.EventHandler(this.tsbtnSalir_Click);
             // 
             // tslSalir
             // 
@@ -203,6 +209,8 @@
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -211,19 +219,22 @@
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(16, 41);
+            this.dgvUsuarios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvUsuarios.Location = new System.Drawing.Point(13, 35);
             this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUsuarios.MultiSelect = false;
             this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(1093, 542);
-            this.dgvUsuarios.TabIndex = 2;
+            this.dgvUsuarios.TabIndex = 4;
             // 
             // FRM_Listar_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1128, 590);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvUsuarios);
+            this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_Listar_Usuarios";
             this.Text = "FRM_Listar_Usuarios";
