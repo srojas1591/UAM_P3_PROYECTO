@@ -43,7 +43,9 @@
     <Compile Include="BD\cls_BD_DAL.cs" />
     <Compile Include="Cat_Mant\cls_EMPLEADOS_DAL.cs" />
     <Compile Include="Cat_Mant\cls_ESTADOS_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_MediosElectronicos_DAL.cs" />
     <Compile Include="Cat_Mant\cls_PRODUCTOS_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TiposClientes_DAL.cs" />
     <Compile Include="Cat_Mant\cls_USUARIOS_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
