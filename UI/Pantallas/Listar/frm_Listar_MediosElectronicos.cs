@@ -48,13 +48,14 @@ namespace UI.Pantallas.Listar
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void tsbtnModificar_Click(object sender, EventArgs e)
         {
             if (dgv_MediosElectronicos.Rows.Count > 0)
             {
                 Obj_MediosElectronicos_DAL = new cls_MediosElectronicos_DAL();
                 Obj_MediosElectronicos_DAL.cAx = 'U';
-                Obj_MediosElectronicos_DAL.cIdEstado = Convert.ToChar(dgv_MediosElectronicos.SelectedRows[0].Cells[0].Value.ToString());
+                Obj_MediosElectronicos_DAL.sIdMedioElectronico = dgv_MediosElectronicos.SelectedRows[0].Cells[0].Value.ToString();
                 Obj_MediosElectronicos_DAL.sNombreMedioElectronico = dgv_MediosElectronicos.SelectedRows[0].Cells[1].Value.ToString();
                 Obj_MediosElectronicos_DAL.sDescMedioElectronico = dgv_MediosElectronicos.SelectedRows[0].Cells[2].Value.ToString();
                 Obj_MediosElectronicos_DAL.cIdEstado = Convert.ToChar(dgv_MediosElectronicos.SelectedRows[0].Cells[3].Value.ToString());
@@ -84,6 +85,34 @@ namespace UI.Pantallas.Listar
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
+            Cargar_Datos();
+        }
+
+        private void tsbtnNuevo_Click(object sender, EventArgs e)
+        {
+            Obj_MediosElectronicos_DAL = new cls_MediosElectronicos_DAL();
+            Obj_MediosElectronicos_DAL.cAx = 'I';
+
+            Pantallas.Editar.frm_Editar_MediosElectronicos Obj_Pantalla_MediosElectronicos = new Editar.frm_Editar_MediosElectronicos();
+            Obj_Pantalla_MediosElectronicos.Obj_MediosElectronicos_DAL = Obj_MediosElectronicos_DAL;
+
+            Obj_Pantalla_MediosElectronicos.ShowDialog();
+
+            Cargar_Datos();
+        }
+
+        private void tsbtnRefrescar_Click(object sender, EventArgs e)
+        {
+            Cargar_Datos();
+        }
+
+        private void tsbtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgv_MediosElectronicos.RowCount > 0)
+            {
+                Obj_MediosElectronicos_DAL.sPK = dgv_MediosElectronicos.SelectedRows[0].Cells[0].Value.ToString();
+                Obj_MediosElectronicos_BLL.Eliminar_MediosElectronicos(ref Obj_MediosElectronicos_DAL, Obj_MediosElectronicos_DAL.sPK);
+            }
             Cargar_Datos();
         }
     }

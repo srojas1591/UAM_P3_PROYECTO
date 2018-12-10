@@ -90,6 +90,7 @@
             this.tsbtnRefrescar.Name = "tsbtnRefrescar";
             this.tsbtnRefrescar.Size = new System.Drawing.Size(24, 32);
             this.tsbtnRefrescar.Text = "toolStripButton1";
+            this.tsbtnRefrescar.Click += new System.EventHandler(this.tsbtnRefrescar_Click);
             // 
             // tslRefrescar
             // 
@@ -110,6 +111,7 @@
             this.tsbtnNuevo.Name = "tsbtnNuevo";
             this.tsbtnNuevo.Size = new System.Drawing.Size(24, 32);
             this.tsbtnNuevo.Text = "nuevo";
+            this.tsbtnNuevo.Click += new System.EventHandler(this.tsbtnNuevo_Click);
             // 
             // toolStripLabel2
             // 
@@ -151,6 +153,7 @@
             this.tsbtnEliminar.Name = "tsbtnEliminar";
             this.tsbtnEliminar.Size = new System.Drawing.Size(24, 32);
             this.tsbtnEliminar.Text = "eliminar";
+            this.tsbtnEliminar.Click += new System.EventHandler(this.tsbtnEliminar_Click);
             // 
             // toolStripLabel4
             // 

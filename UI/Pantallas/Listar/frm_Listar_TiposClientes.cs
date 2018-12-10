@@ -38,14 +38,14 @@ namespace UI.Pantallas.Listar
                 Obj_TiposClientes_BLL.Filtrar_TiposClientes(ref Obj_TiposClientes_DAL, tstxtBuscar.Text.Trim());
             }
 
-            if (Obj_TiposClientes_DAL.SMsjError == string.Empty)
+            if (Obj_TiposClientes_DAL.sMsjError == string.Empty)
             {
                 dgv_TiposClientes.DataSource = null;
                 dgv_TiposClientes.DataSource = Obj_TiposClientes_DAL.Obj_DT;
             }
             else
             {
-                MessageBox.Show("Se presento un error a la hora de listar TiposClientes: [" + Obj_TiposClientes_DAL.SMsjError + "].", "ERROR",
+                MessageBox.Show("Se presento un error a la hora de listar TiposClientes: [" + Obj_TiposClientes_DAL.sMsjError + "].", "ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -64,5 +64,53 @@ namespace UI.Pantallas.Listar
         {
             Cargar_Datos();
         }
+
+        private void tsbtnNuevo_Click(object sender, EventArgs e)
+        {
+            Obj_TiposClientes_DAL = new cls_TiposClientes_DAL();
+            Obj_TiposClientes_DAL.cAx = 'I';
+
+            Pantallas.Editar.frm_Editar_TiposUsuarios Obj_Pantalla_TiposClientes = new Editar.frm_Editar_TiposUsuarios();
+            Obj_Pantalla_TiposClientes.obj_TiposClientes_DAL = Obj_TiposClientes_DAL;
+
+            Obj_Pantalla_TiposClientes.ShowDialog();
+
+            Cargar_Datos();
+        }
+
+        private void tsbtnModificar_Click(object sender, EventArgs e)
+        {
+            if (dgv_TiposClientes.Rows.Count > 0)
+            {
+                Obj_TiposClientes_DAL = new cls_TiposClientes_DAL();
+                Obj_TiposClientes_DAL.cAx = 'U';
+                Obj_TiposClientes_DAL.iIdTipoCliente = Convert.ToInt16(dgv_TiposClientes.SelectedRows[0].Cells[0].Value);
+                Obj_TiposClientes_DAL.sTipoCliente = dgv_TiposClientes.SelectedRows[0].Cells[1].Value.ToString();
+                Obj_TiposClientes_DAL.sDescripcion = dgv_TiposClientes.SelectedRows[0].Cells[2].Value.ToString();
+                Obj_TiposClientes_DAL.cIdEstado = Convert.ToChar(dgv_TiposClientes.SelectedRows[0].Cells[3].Value.ToString());
+
+                Pantallas.Editar.frm_Editar_TiposUsuarios Pant_Modif_TiposUsuarios = new Editar.frm_Editar_TiposUsuarios();
+                Pant_Modif_TiposUsuarios.obj_TiposClientes_DAL = Obj_TiposClientes_DAL;
+                Pant_Modif_TiposUsuarios.ShowDialog();
+
+                Cargar_Datos();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un Empleado", "Alerta",
+                    MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+        }
+
+        private void tsbtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgv_TiposClientes.RowCount > 0)
+            {
+                Obj_TiposClientes_DAL.sPk = dgv_TiposClientes.SelectedRows[0].Cells[0].Value.ToString();
+                Obj_TiposClientes_BLL.Eliminar_TiposClientes(ref Obj_TiposClientes_DAL, Obj_TiposClientes_DAL.sPk);
+            }
+            Cargar_Datos();
+        }
+
     }
 }
