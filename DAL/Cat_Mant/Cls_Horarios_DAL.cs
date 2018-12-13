@@ -4,25 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-
 namespace DAL.Cat_Mant
 {
-    public class cls_USUARIOS_DAL
+  public  class Cls_Horarios_DAL
     {
-        private char _cIdEstados, _cAx;
-        private string _sMsjError, _sNombreUsuario, _sContrasena, _sIdEmpleado, _sPk;
+        private int _iIdHorario, _iCantHoras;
+        private char  _IdEstados, _cAx;
+        private string _sMsjError, _sDescHorarios, _sEntrada, _sSalida;
         public DataTable Obj_DT = new DataTable();
 
-        public char CIdEstados
+        public int iIdHorario
         {
             get
             {
-                return _cIdEstados;
+                return _iIdHorario;
             }
 
             set
             {
-                _cIdEstados = value;
+                _iIdHorario = value;
             }
         }
 
@@ -52,55 +52,68 @@ namespace DAL.Cat_Mant
             }
         }
 
-        public string SNombreUsuario
+        public string SDescHorarios
         {
             get
             {
-                return _sNombreUsuario;
+                return _sDescHorarios;
             }
 
             set
             {
-                _sNombreUsuario = value;
+                _sDescHorarios = value;
             }
         }
 
-        public string SContrasena
+        public char IdEstados
         {
             get
             {
-                return _sContrasena;
+                return _IdEstados;
             }
 
             set
             {
-                _sContrasena = value;
+                _IdEstados = value;
             }
         }
 
-        public string SIdEmpleado
+        public int ICantHoras
         {
             get
             {
-                return _sIdEmpleado;
+                return _iCantHoras;
             }
 
             set
             {
-                _sIdEmpleado = value;
+                _iCantHoras = value;
             }
         }
 
-        public string sPk
+        public string sEntrada
         {
             get
             {
-                return _sPk;
+                return _sEntrada;
             }
 
             set
             {
-                _sPk = value;
+                _sEntrada = value;
+            }
+        }
+
+        public string sSalida
+        {
+            get
+            {
+                return _sSalida;
+            }
+
+            set
+            {
+                _sSalida = value;
             }
         }
     }

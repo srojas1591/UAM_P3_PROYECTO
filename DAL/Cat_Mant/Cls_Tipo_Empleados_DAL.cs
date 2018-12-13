@@ -7,26 +7,23 @@ using System.Data;
 
 namespace DAL.Cat_Mant
 {
-    public class cls_ESTADOS_DAL
+  public  class Cls_Tipo_Empleados_DAL
     {
-
-        private char _cIdEstados, _cAx, _cComboEstado;
-
-        private char _cIdEstados, _cAx, _cComboE;
-
-        private string _sMsjError, _sDescEstado;
+        private int _iIdTipoEmpleado;
+        private char _IdEstado, _cAx;
+        private string _sMsjError, _sDescTipo;
         public DataTable Obj_DT = new DataTable();
 
-        public char CIdEstados
+        public int iIdTipoEmpleado
         {
             get
             {
-                return _cIdEstados;
+                return _iIdTipoEmpleado;
             }
 
             set
             {
-                _cIdEstados = value;
+                _iIdTipoEmpleado = value;
             }
         }
 
@@ -56,42 +53,33 @@ namespace DAL.Cat_Mant
             }
         }
 
-        public string SDescEstado
+        public string SDescTipo
         {
             get
             {
-                return _sDescEstado;
+                return _sDescTipo;
             }
 
             set
             {
-                _sDescEstado = value;
+                _sDescTipo = value;
             }
         }
 
-
-        public char cComboEstado
+        public char IdEstado
         {
             get
             {
-                return _cComboEstado;
-
-        public char cComboE
-        {
-            get
-            {
-                return _cComboE;
-
+                return _IdEstado;
             }
 
             set
             {
-
-                _cComboEstado = value;
-
-                _cComboE = value;
-
+                _IdEstado = value;
             }
+        }
+
+        
         }
     }
-}
+
