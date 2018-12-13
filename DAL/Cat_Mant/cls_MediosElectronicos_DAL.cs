@@ -10,7 +10,7 @@ namespace DAL.Cat_Mant
     public class cls_MediosElectronicos_DAL
     {
         private char _cAx, _cIdEstado;
-        private string _sIdMedioElectronico, _sNombreMedioElectronico, _sDescMedioElectronico, _sMsjError;
+        private string _sIdMedioElectronico, _sNombreMedioElectronico, _sDescMedioElectronico, _sMsjError, _sPk;
         public DataTable Obj_DT = new DataTable();
 
         public char cAx
@@ -88,6 +88,19 @@ namespace DAL.Cat_Mant
             set
             {
                 _sMsjError = value;
+            }
+        }
+
+        public string sPK
+        {
+            get
+            {
+                return _sPk;
+            }
+
+            set
+            {
+                _sPk = value;
             }
         }
     }

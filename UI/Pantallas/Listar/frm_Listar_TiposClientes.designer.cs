@@ -78,9 +78,10 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1250, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1528, 35);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Click += new System.EventHandler(this.frm_Listar_TiposClientes_Load);
             // 
             // tsbtnRefrescar
             // 
@@ -88,19 +89,20 @@
             this.tsbtnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnRefrescar.Image")));
             this.tsbtnRefrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnRefrescar.Name = "tsbtnRefrescar";
-            this.tsbtnRefrescar.Size = new System.Drawing.Size(24, 28);
+            this.tsbtnRefrescar.Size = new System.Drawing.Size(24, 32);
             this.tsbtnRefrescar.Text = "toolStripButton1";
+            this.tsbtnRefrescar.Click += new System.EventHandler(this.frm_Listar_TiposClientes_Load);
             // 
             // tslRefrescar
             // 
             this.tslRefrescar.Name = "tslRefrescar";
-            this.tslRefrescar.Size = new System.Drawing.Size(83, 28);
+            this.tslRefrescar.Size = new System.Drawing.Size(98, 32);
             this.tslRefrescar.Text = "Refrescar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 35);
             // 
             // tsbtnNuevo
             // 
@@ -108,19 +110,20 @@
             this.tsbtnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnNuevo.Image")));
             this.tsbtnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnNuevo.Name = "tsbtnNuevo";
-            this.tsbtnNuevo.Size = new System.Drawing.Size(24, 28);
+            this.tsbtnNuevo.Size = new System.Drawing.Size(24, 32);
             this.tsbtnNuevo.Text = "nuevo";
+            this.tsbtnNuevo.Click += new System.EventHandler(this.tsbtnNuevo_Click);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(64, 28);
+            this.toolStripLabel2.Size = new System.Drawing.Size(74, 32);
             this.toolStripLabel2.Text = "Nuevo";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 35);
             // 
             // tsbtnModificar
             // 
@@ -128,19 +131,20 @@
             this.tsbtnModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnModificar.Image")));
             this.tsbtnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnModificar.Name = "tsbtnModificar";
-            this.tsbtnModificar.Size = new System.Drawing.Size(24, 28);
+            this.tsbtnModificar.Size = new System.Drawing.Size(24, 32);
             this.tsbtnModificar.Text = "Modificar";
+            this.tsbtnModificar.Click += new System.EventHandler(this.tsbtnModificar_Click);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(87, 28);
+            this.toolStripLabel3.Size = new System.Drawing.Size(101, 32);
             this.toolStripLabel3.Text = "Modificar";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 35);
             // 
             // tsbtnEliminar
             // 
@@ -148,19 +152,20 @@
             this.tsbtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnEliminar.Image")));
             this.tsbtnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnEliminar.Name = "tsbtnEliminar";
-            this.tsbtnEliminar.Size = new System.Drawing.Size(24, 28);
+            this.tsbtnEliminar.Size = new System.Drawing.Size(24, 32);
             this.tsbtnEliminar.Text = "eliminar";
+            this.tsbtnEliminar.Click += new System.EventHandler(this.tsbtnEliminar_Click);
             // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(74, 28);
+            this.toolStripLabel4.Size = new System.Drawing.Size(87, 32);
             this.toolStripLabel4.Text = "Eliminar";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 35);
             // 
             // tsbtnBuscar
             // 
@@ -168,25 +173,26 @@
             this.tsbtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnBuscar.Image")));
             this.tsbtnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnBuscar.Name = "tsbtnBuscar";
-            this.tsbtnBuscar.Size = new System.Drawing.Size(24, 28);
+            this.tsbtnBuscar.Size = new System.Drawing.Size(24, 32);
             this.tsbtnBuscar.Text = "buscar";
             this.tsbtnBuscar.Click += new System.EventHandler(this.btn_Buscar_Click);
             // 
             // tslBuscar
             // 
             this.tslBuscar.Name = "tslBuscar";
-            this.tslBuscar.Size = new System.Drawing.Size(63, 28);
+            this.tslBuscar.Size = new System.Drawing.Size(74, 32);
             this.tslBuscar.Text = "Buscar";
             // 
             // tstxtBuscar
             // 
             this.tstxtBuscar.Name = "tstxtBuscar";
-            this.tstxtBuscar.Size = new System.Drawing.Size(148, 31);
+            this.tstxtBuscar.Size = new System.Drawing.Size(180, 35);
+            this.tstxtBuscar.TextChanged += new System.EventHandler(this.tstxt_Filtro_TextChanged);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 35);
             // 
             // tsbtnSalir
             // 
@@ -194,14 +200,14 @@
             this.tsbtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSalir.Image")));
             this.tsbtnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnSalir.Name = "tsbtnSalir";
-            this.tsbtnSalir.Size = new System.Drawing.Size(24, 28);
+            this.tsbtnSalir.Size = new System.Drawing.Size(24, 32);
             this.tsbtnSalir.Text = "Salir";
             this.tsbtnSalir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // tslSalir
             // 
             this.tslSalir.Name = "tslSalir";
-            this.tslSalir.Size = new System.Drawing.Size(45, 28);
+            this.tslSalir.Size = new System.Drawing.Size(52, 32);
             this.tslSalir.Text = "Salir";
             this.tslSalir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
@@ -215,22 +221,22 @@
             this.dgv_TiposClientes.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_TiposClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_TiposClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_TiposClientes.Location = new System.Drawing.Point(8, 44);
-            this.dgv_TiposClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgv_TiposClientes.Location = new System.Drawing.Point(10, 53);
+            this.dgv_TiposClientes.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dgv_TiposClientes.Name = "dgv_TiposClientes";
-            this.dgv_TiposClientes.Size = new System.Drawing.Size(1230, 625);
+            this.dgv_TiposClientes.Size = new System.Drawing.Size(1503, 750);
             this.dgv_TiposClientes.TabIndex = 4;
             // 
             // frm_Listar_TiposClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1250, 681);
+            this.ClientSize = new System.Drawing.Size(1528, 817);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgv_TiposClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_Listar_TiposClientes";
             this.Text = "Tipos de Clientes";
             this.Load += new System.EventHandler(this.frm_Listar_TiposClientes_Load);

@@ -9,7 +9,11 @@ namespace DAL.Cat_Mant
 {
     public class cls_ESTADOS_DAL
     {
+
+        private char _cIdEstados, _cAx, _cComboEstado;
+
         private char _cIdEstados, _cAx, _cComboE;
+
         private string _sMsjError, _sDescEstado;
         public DataTable Obj_DT = new DataTable();
 
@@ -65,16 +69,28 @@ namespace DAL.Cat_Mant
             }
         }
 
+
+        public char cComboEstado
+        {
+            get
+            {
+                return _cComboEstado;
+
         public char cComboE
         {
             get
             {
                 return _cComboE;
+
             }
 
             set
             {
+
+                _cComboEstado = value;
+
                 _cComboE = value;
+
             }
         }
     }
