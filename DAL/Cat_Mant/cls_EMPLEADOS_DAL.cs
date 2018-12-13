@@ -9,7 +9,11 @@ namespace DAL.Cat_Mant
 {
     public class cls_EMPLEADOS_DAL
     {
+
+        private char _cAx, _cIdDepartamento, _cIdEstado;
+
         private char _cAx, _cIdDepartamento, _cIdEstado, _cCombo;
+
         private string _sIdEmpleado, _sCedula, _sNombre, _sApellidos, _sDireccion, _sTelefonoCasa, _sTelefono_Ref, _sTelefono_Celular, _sMsjError;
         private byte _bEdad;
         private Int32 _iIdHorario, _iIdTipoEmpleado;
@@ -224,6 +228,8 @@ namespace DAL.Cat_Mant
             }
         }
 
+
+
         public char cCombo
         {
             get
@@ -236,5 +242,6 @@ namespace DAL.Cat_Mant
                 _cCombo = value;
             }
         }
+
     }
 }

@@ -18,6 +18,9 @@ namespace BLL.Cat_Mant
             {
                 cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
                 cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
+
+                Obj_BD_DAL.SNomb_Sp = "sp_Listar_Empleados";
+
                 if (Obj_EMPLEADOS_DAL.cCombo == 'C')
                 {
                     Obj_BD_DAL.SNomb_Sp = "sp_Listar_Combo_Empleados";
@@ -28,6 +31,7 @@ namespace BLL.Cat_Mant
                 }
 
                 
+
                 Obj_BD_DAL.SNombTabla = "Empleados";
 
                 Obj_BD_BLL.Exec_DataAdapter(ref Obj_BD_DAL);
