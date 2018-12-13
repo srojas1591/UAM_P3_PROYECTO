@@ -80,7 +80,15 @@
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MenuVertical.Name = "MenuVertical";
+
             this.MenuVertical.Size = new System.Drawing.Size(333, 874);
+
+
+            this.MenuVertical.Size = new System.Drawing.Size(250, 710);
+
+            this.MenuVertical.Size = new System.Drawing.Size(250, 640);
+
+
             this.MenuVertical.TabIndex = 0;
             // 
             // label1
@@ -134,6 +142,7 @@
             this.btnTipoEmpleado.TabIndex = 12;
             this.btnTipoEmpleado.Text = "Tipo\r\nEmpleado";
             this.btnTipoEmpleado.UseVisualStyleBackColor = true;
+            this.btnTipoEmpleado.Click += new System.EventHandler(this.btnTipoEmpleado_Click);
             // 
             // btnTipoClientes
             // 
@@ -249,6 +258,7 @@
             this.btnHorarios.TabIndex = 6;
             this.btnHorarios.Text = "Horarios";
             this.btnHorarios.UseVisualStyleBackColor = true;
+            this.btnHorarios.Click += new System.EventHandler(this.btnHorarios_Click);
             // 
             // btnEstados
             // 
@@ -423,14 +433,44 @@
             this.PanelVentana.Location = new System.Drawing.Point(333, 62);
             this.PanelVentana.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelVentana.Name = "PanelVentana";
+
             this.PanelVentana.Size = new System.Drawing.Size(1400, 812);
+
+
+            this.PanelVentana.Size = new System.Drawing.Size(1050, 660);
             this.PanelVentana.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(385, 181);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(308, 215);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+
+            this.PanelVentana.Size = new System.Drawing.Size(1050, 590);
+
+            this.PanelVentana.TabIndex = 2;
+            // 
+
             // FRM_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1733, 874);
+
+
+            this.ClientSize = new System.Drawing.Size(1300, 710);
+
+            this.ClientSize = new System.Drawing.Size(1300, 640);
+
+
             this.Controls.Add(this.PanelVentana);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.MenuVertical);
