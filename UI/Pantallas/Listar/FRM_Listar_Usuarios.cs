@@ -46,5 +46,72 @@ namespace UI.Pantallas.Listar
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void tsbtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        
+
+        private void tsbtnNuevo_Click_1(object sender, EventArgs e)
+        {
+            Obj_USUARIOS_DAL = new cls_USUARIOS_DAL();
+            Obj_USUARIOS_DAL.CAx = 'I';
+
+            Pantallas.Editar.FRM_Editar_Usuarios objUsuPan = new Editar.FRM_Editar_Usuarios();
+            objUsuPan.obj_Editar_Usuarios_DAL = Obj_USUARIOS_DAL;
+
+            objUsuPan.ShowDialog();
+
+            CargarDatos();
+        }
+
+        private void tsbtnRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+
+        private void tsbtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvUsuarios.RowCount > 0)
+            {
+                Obj_USUARIOS_DAL.sPk  = dgvUsuarios.SelectedRows[0].Cells[0].Value.ToString();
+                Obj_USUARIOS_BLL.Eliminar_Usuarios(ref Obj_USUARIOS_DAL, Obj_USUARIOS_DAL.sPk);
+            }
+            CargarDatos();
+        }
+
+        private void tsbtnModificar_Click(object sender, EventArgs e)
+        {
+            if (dgvUsuarios.Rows.Count > 0)
+            {
+                Obj_USUARIOS_DAL = new cls_USUARIOS_DAL();
+                Obj_USUARIOS_DAL.CAx = 'U';
+                Obj_USUARIOS_DAL.SNombreUsuario = dgvUsuarios.SelectedRows[0].Cells[0].Value.ToString();
+                Obj_USUARIOS_DAL.SContrasena = dgvUsuarios.SelectedRows[0].Cells[1].Value.ToString();
+                Obj_USUARIOS_DAL.SIdEmpleado = dgvUsuarios.SelectedRows[0].Cells[2].Value.ToString();
+                Obj_USUARIOS_DAL.CIdEstados = Convert.ToChar(dgvUsuarios.SelectedRows[0].Cells[3].Value.ToString());
+
+                Pantallas.Editar.FRM_Editar_Usuarios objUsuPan = new Editar.FRM_Editar_Usuarios();
+                objUsuPan.obj_Editar_Usuarios_DAL = Obj_USUARIOS_DAL;
+
+                objUsuPan.ShowDialog();
+
+                CargarDatos();
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un Estado", "Alerta",
+                    MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+
+           
+        }
+
+        private void tstxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
     }
 }
