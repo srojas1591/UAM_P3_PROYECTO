@@ -70,7 +70,6 @@ namespace BLL.Cat_Mant
                 Obj_ESTADOS_DAL.SMsjError = ex.Message.ToString();
             }
         }
-
         public void Eliminar_Estados(ref cls_ESTADOS_DAL Obj_ESTADOS_DAL, string sFiltro)
         {
             try

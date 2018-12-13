@@ -1,6 +1,6 @@
 ﻿namespace UI.Pantallas.Listar
 {
-    partial class FRM_Listar_Estados
+    partial class Frm_Listar_Tipo_Empleados
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Listar_Estados));
-            this.dgvEstados = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Listar_Tipo_Empleados));
+            this.dgvTipo_Empleados = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnRefrescar = new System.Windows.Forms.ToolStripButton();
             this.tslRefrescar = new System.Windows.Forms.ToolStripLabel();
@@ -49,29 +49,29 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnSalir = new System.Windows.Forms.ToolStripButton();
             this.tslSalir = new System.Windows.Forms.ToolStripLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipo_Empleados)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvEstados
+            // dgvTipo_Empleados
             // 
-            this.dgvEstados.AllowUserToAddRows = false;
-            this.dgvEstados.AllowUserToDeleteRows = false;
-            this.dgvEstados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvTipo_Empleados.AllowUserToAddRows = false;
+            this.dgvTipo_Empleados.AllowUserToDeleteRows = false;
+            this.dgvTipo_Empleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvEstados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEstados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvEstados.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvEstados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstados.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvEstados.Location = new System.Drawing.Point(12, 28);
-            this.dgvEstados.MultiSelect = false;
-            this.dgvEstados.Name = "dgvEstados";
-            this.dgvEstados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEstados.Size = new System.Drawing.Size(820, 440);
-            this.dgvEstados.TabIndex = 0;
+            this.dgvTipo_Empleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTipo_Empleados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvTipo_Empleados.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvTipo_Empleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTipo_Empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTipo_Empleados.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvTipo_Empleados.Location = new System.Drawing.Point(0, 30);
+            this.dgvTipo_Empleados.MultiSelect = false;
+            this.dgvTipo_Empleados.Name = "dgvTipo_Empleados";
+            this.dgvTipo_Empleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTipo_Empleados.Size = new System.Drawing.Size(846, 474);
+            this.dgvTipo_Empleados.TabIndex = 4;
             // 
             // toolStrip1
             // 
@@ -98,7 +98,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(846, 27);
-            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tsbtnRefrescar
@@ -193,6 +193,7 @@
             this.tsbtnBuscar.Name = "tsbtnBuscar";
             this.tsbtnBuscar.Size = new System.Drawing.Size(24, 24);
             this.tsbtnBuscar.Text = "buscar";
+            this.tsbtnBuscar.Click += new System.EventHandler(this.tsbtnBuscar_Click);
             // 
             // tslBuscar
             // 
@@ -227,19 +228,19 @@
             this.tslSalir.Size = new System.Drawing.Size(29, 24);
             this.tslSalir.Text = "Salir";
             // 
-            // FRM_Listar_Estados
+            // Frm_Listar_Tipo_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(846, 479);
+            this.ClientSize = new System.Drawing.Size(846, 504);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dgvEstados);
+            this.Controls.Add(this.dgvTipo_Empleados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRM_Listar_Estados";
-            this.Text = "FRM_Listar_Estados";
-            this.Load += new System.EventHandler(this.FRM_Listar_Estados_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).EndInit();
+            this.Name = "Frm_Listar_Tipo_Empleados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Frm_Listar_Tipo_Empleados";
+            this.Load += new System.EventHandler(this.Frm_Listar_Tipo_Empleados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipo_Empleados)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -249,7 +250,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvEstados;
+        private System.Windows.Forms.DataGridView dgvTipo_Empleados;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbtnRefrescar;
         private System.Windows.Forms.ToolStripLabel tslRefrescar;

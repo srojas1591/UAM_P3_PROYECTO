@@ -1,6 +1,6 @@
 ﻿namespace UI.Pantallas.Listar
 {
-    partial class FRM_Listar_Estados
+    partial class Frm_Listar_Horarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Listar_Estados));
-            this.dgvEstados = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Listar_Horarios));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnRefrescar = new System.Windows.Forms.ToolStripButton();
             this.tslRefrescar = new System.Windows.Forms.ToolStripLabel();
@@ -49,29 +48,10 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnSalir = new System.Windows.Forms.ToolStripButton();
             this.tslSalir = new System.Windows.Forms.ToolStripLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
+            this.dgvHorarios = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvEstados
-            // 
-            this.dgvEstados.AllowUserToAddRows = false;
-            this.dgvEstados.AllowUserToDeleteRows = false;
-            this.dgvEstados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvEstados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEstados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvEstados.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvEstados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstados.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvEstados.Location = new System.Drawing.Point(12, 28);
-            this.dgvEstados.MultiSelect = false;
-            this.dgvEstados.Name = "dgvEstados";
-            this.dgvEstados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEstados.Size = new System.Drawing.Size(820, 440);
-            this.dgvEstados.TabIndex = 0;
             // 
             // toolStrip1
             // 
@@ -98,7 +78,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(846, 27);
-            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tsbtnRefrescar
@@ -193,6 +173,7 @@
             this.tsbtnBuscar.Name = "tsbtnBuscar";
             this.tsbtnBuscar.Size = new System.Drawing.Size(24, 24);
             this.tsbtnBuscar.Text = "buscar";
+            this.tsbtnBuscar.Click += new System.EventHandler(this.tsbtnBuscar_Click);
             // 
             // tslBuscar
             // 
@@ -227,21 +208,41 @@
             this.tslSalir.Size = new System.Drawing.Size(29, 24);
             this.tslSalir.Text = "Salir";
             // 
-            // FRM_Listar_Estados
+            // dgvHorarios
+            // 
+            this.dgvHorarios.AllowUserToAddRows = false;
+            this.dgvHorarios.AllowUserToDeleteRows = false;
+            this.dgvHorarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHorarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHorarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvHorarios.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvHorarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvHorarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHorarios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvHorarios.Location = new System.Drawing.Point(0, 30);
+            this.dgvHorarios.MultiSelect = false;
+            this.dgvHorarios.Name = "dgvHorarios";
+            this.dgvHorarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHorarios.Size = new System.Drawing.Size(846, 449);
+            this.dgvHorarios.TabIndex = 3;
+            // 
+            // Frm_Listar_Horarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(846, 479);
+            this.Controls.Add(this.dgvHorarios);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dgvEstados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRM_Listar_Estados";
-            this.Text = "FRM_Listar_Estados";
-            this.Load += new System.EventHandler(this.FRM_Listar_Estados_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).EndInit();
+            this.Name = "Frm_Listar_Horarios";
+            this.Text = "Frm_Listar_Horarios";
+            this.Load += new System.EventHandler(this.Frm_Listar_Horarios_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,7 +250,6 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvEstados;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbtnRefrescar;
         private System.Windows.Forms.ToolStripLabel tslRefrescar;
@@ -269,5 +269,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton tsbtnSalir;
         private System.Windows.Forms.ToolStripLabel tslSalir;
+        private System.Windows.Forms.DataGridView dgvHorarios;
     }
 }
