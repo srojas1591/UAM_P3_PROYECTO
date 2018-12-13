@@ -18,7 +18,16 @@ namespace BLL.Cat_Mant
                 cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
                 cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
 
-                Obj_BD_DAL.SNomb_Sp = "sp_Listar_ESTADOS";
+                if (Obj_ESTADOS_DAL.cComboE == 'C')
+                {
+                    Obj_BD_DAL.SNomb_Sp = "sp_Listar_Estado_Combo";
+                }
+                else
+                {
+                    Obj_BD_DAL.SNomb_Sp = "sp_Listar_ESTADOS";
+                }
+
+                
                 Obj_BD_DAL.SNombTabla = "ESTADOS";
 
                 Obj_BD_BLL.Exec_DataAdapter(ref Obj_BD_DAL);
@@ -143,9 +152,7 @@ namespace BLL.Cat_Mant
 
                 Obj_BD_DAL.SNomb_Sp = "sp_Insertar_Estados";
 
-
                 Obj_BD_BLL.Crear_DT_Parametros(ref Obj_BD_DAL);
-
 
                 Obj_BD_DAL.dt_Parametros.Rows.Add("@IdEstado", "4", Obj_ESTADOS_DAL.CIdEstados);
                 Obj_BD_DAL.dt_Parametros.Rows.Add("@Descripcion", "2", Obj_ESTADOS_DAL.SDescEstado);
