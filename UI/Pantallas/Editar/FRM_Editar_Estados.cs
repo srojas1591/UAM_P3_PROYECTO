@@ -16,8 +16,7 @@ namespace UI.Pantallas.Editar
 {
     public partial class FRM_Editar_Estados : Form
     {
-        cls_ESTADOS_BLL Obj_Estados_BLL = new cls_ESTADOS_BLL();
-        
+        cls_ESTADOS_BLL Obj_Estados_BLL = new cls_ESTADOS_BLL();        
         public cls_ESTADOS_DAL Obj_Estados_Editar_DAL;
         
         public FRM_Editar_Estados()

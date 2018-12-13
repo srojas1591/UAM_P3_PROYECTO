@@ -50,15 +50,12 @@
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.btnMenuSlide = new System.Windows.Forms.PictureBox();
             this.PanelVentana = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenuSlide)).BeginInit();
-            this.PanelVentana.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -82,7 +79,11 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
+
             this.MenuVertical.Size = new System.Drawing.Size(250, 710);
+
+            this.MenuVertical.Size = new System.Drawing.Size(250, 640);
+
             this.MenuVertical.TabIndex = 0;
             // 
             // label1
@@ -281,6 +282,7 @@
             this.btnEmpleado.TabIndex = 4;
             this.btnEmpleado.Text = "Empleados";
             this.btnEmpleado.UseVisualStyleBackColor = true;
+            this.btnEmpleado.Click += new System.EventHandler(this.btnEmpleado_Click);
             // 
             // btnDepartamentos
             // 
@@ -401,10 +403,12 @@
             // PanelVentana
             // 
             this.PanelVentana.BackColor = System.Drawing.Color.White;
-            this.PanelVentana.Controls.Add(this.pictureBox2);
+            this.PanelVentana.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelVentana.BackgroundImage")));
+            this.PanelVentana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PanelVentana.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelVentana.Location = new System.Drawing.Point(250, 50);
             this.PanelVentana.Name = "PanelVentana";
+
             this.PanelVentana.Size = new System.Drawing.Size(1050, 660);
             this.PanelVentana.TabIndex = 2;
             // 
@@ -420,16 +424,26 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+
+            this.PanelVentana.Size = new System.Drawing.Size(1050, 590);
+            this.PanelVentana.TabIndex = 2;
+            // 
+
             // FRM_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1300, 710);
+
+            this.ClientSize = new System.Drawing.Size(1300, 640);
+
             this.Controls.Add(this.PanelVentana);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_PRINCIPAL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FRM_PRINCIPAL_Load);
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
@@ -438,8 +452,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenuSlide)).EndInit();
-            this.PanelVentana.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -466,7 +478,6 @@
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnTipoEmpleado;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
     }
 }

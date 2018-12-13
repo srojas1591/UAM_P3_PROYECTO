@@ -492,7 +492,7 @@
         DkYH0BDToQLOuxYeAk1d14cvtyU0Qp16sY4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PanelVentana.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUcAAACTCAYAAAAdkdvmAAAABGdBTUEAALGPC/xhBQAAEQZJREFUeF7t
         nU2oJUcVgDMYNYpR409ABY2giC5MFEREwb+FGzVRBAUXyUZQEBMUYnZGMAtBiAvduDBZCYqSjS4EUVBc
